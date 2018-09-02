@@ -59,7 +59,7 @@ http://localhost:10000/
 - 五十川 員申(Kazunobu IKAGAWA)　Developer
 - 高木 志宗(Yukimune TAKAGI)　Developer
 - 宮田 人司(Hotoshi MIYATA)　Designer
-  
+ 
 このような素晴らしいCivic Tech作品を開発されたオリジナル版の開発チームに、心から感謝と尊敬の念を表します。
 
 ### 栗東市版
