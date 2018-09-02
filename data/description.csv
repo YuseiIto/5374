@@ -1,8 +1,8 @@
 label,sublabel,description,styles,bgcolor
 その他プラスチック,,,img/moyasanai02.svg,#733b96
-粗大ごみ《大型家具等》,,,img/shigen02.svg,#77ae1f
-粗大ごみ《その他粗大ごみ》,,,img/shigen02.svg,#77ae1f
-破砕ごみ,,,img/shigen02.svg,#77ae1f
+粗大ごみ《大型家具等》,,,img/sodai_kagu.svg,#27a047
+粗大ごみ《その他粗大ごみ》,,,img/sodai_etc.svg,#77ae1f
+破砕ごみ,,,img/shigen02.svg,#387d39
 可燃ごみ,,,img/Kanen.svg,#ea3b13
 ビン,,,img/bin02.svg,#2dc7aa
 金属類,,,img/bin02.svg,#2dc7aa
