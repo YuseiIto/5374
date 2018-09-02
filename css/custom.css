@@ -1,19 +1,42 @@
 /* Custom button
 -------------------------------------------------- */
+
 body {
-    font-family: ".HiraKakuInterface-W1", 'Lucida Grande',
-    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
-    Meiryo, メイリオ, sans-serif;
+    font-family: ".HiraKakuInterface-W1", 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 
-/* Override base .btn styles */
-/* Apply text and background changes to three key states: default, hover, and active (click). */
-/*#accordion-group0{background-color:  #733b96;}*//* 燃やす */
-/*#accordion-group1{background-color:  #77ae1f;}*//* 燃やさない */
-/*#accordion-group2{background-color:  #ea3b13;}*//* 資源 */
-/*#accordion-group3{background-color:  #2dc7aa;}*//* びん */
 
-#accordion a, #accordion a:hover {
+/* Override base .btn styles */
+
+
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+
+
+/*#accordion-group0{background-color:  #733b96;}*/
+
+
+/* 燃やす */
+
+
+/*#accordion-group1{background-color:  #77ae1f;}*/
+
+
+/* 燃やさない */
+
+
+/*#accordion-group2{background-color:  #ea3b13;}*/
+
+
+/* 資源 */
+
+
+/*#accordion-group3{background-color:  #2dc7aa;}*/
+
+
+/* びん */
+
+#accordion a,
+#accordion a:hover {
     color: white;
     text-decoration: none;
 }
@@ -24,13 +47,11 @@ body {
     border-radius: 0
 }
 
-#accordion3
-a.accordion-toggle-top {
+#accordion3 a.accordion-toggle-top {
     margin: 0;
     text-align: left;
     font-size: 25px;
     margin: 15px 0 15px 15px;
-
 }
 
 #accordion3 h2 {
@@ -51,7 +72,6 @@ a.accordion-toggle-top {
     font-size: 16px;
     margin-top: 15px;
 }
-
 
 #accordion3 #caption {
     font-size: 12px;
@@ -75,7 +95,6 @@ a.accordion-toggle-top {
 
 a.accordion-toggle-top:hover {
     color: #000000;
-
 }
 
 .accordion-group-top {
@@ -98,8 +117,7 @@ a.accordion-toggle-top:hover {
     text-align: center
 }
 
-.date {
-}
+.date {}
 
 #gps_area {
     margin-top: 5px;
@@ -119,7 +137,6 @@ a.accordion-toggle-top:hover {
     width: 80%;
     font-size: 22px;
     /*font-weight: bold;*/
-
 }
 
 .accordion-heading .accordion-toggle {
@@ -152,4 +169,8 @@ a.accordion-toggle-top:hover {
 #select_area_title {
     text-align: center;
     font-size: 20px;
+}
+
+.credit li {
+    color: #5F5F5F;
 }
