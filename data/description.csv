@@ -4,9 +4,9 @@ label,sublabel,description,styles,bgcolor
 粗大ごみ《その他粗大ごみ》,,,img/sodai_etc.svg,#77ae1f
 破砕ごみ,,,img/Hasai.svg,#387d39
 可燃ごみ,,,img/Kanen.svg,#ea3b13
-ビン,,,img/bin02.svg,#2dc7aa
-金属類,,,img/bin02.svg,#2dc7aa
-ガスライター,,,img/bin02.svg,#2dc7aa
+ビン,,,img/bin.svg,#a1d8e6
+金属類,,,img/Kinzoku.svg,#8f6552
+ガスライター,,,img/bin02.svg,#7b5544
 乾電池,,,img/bin02.svg,#2dc7aa
 古紙・古着類,,,img/Koshi_Hurugi.svg,#ffdc00
 ペットボトル,,,img/bin02.svg,#2dc7aa
