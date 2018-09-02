@@ -4,10 +4,8 @@
 ゴミの問題はどの地域でも深刻になりつつあります。
  そんな中、[Code for Kanazawa](http://codeforkanazawa.org/)によって、「正しいゴミの捨て方」に注目して作られたのが、5374.jpです。 5374は、例えばお引っ越しをされた場合に、このアプリを使えばすぐにその街のごみの捨て方が分かるように、目的と使い方がとてもシンプルにデザインされています。
 
-5374.jp for Rittoは、金沢市のために作られた5374の、栗東市版です。
+5374.jp for Rittoは、金沢市のために作られた5374の、滋賀県栗東市版です。
 
-**栗東市**
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52292.2980717501!2d135.9999777920764!3d34.9999800698885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016e506aebc779%3A0x1b9d2d6274b62ea6!2z5ruL6LOA55yM5qCX5p2x5biC!5e0!3m2!1sja!2sjp!4v1535892449549" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 ## 使い方
 
 [5374 for Ritto](http://ritto.5374.jp/ )について説明します。
