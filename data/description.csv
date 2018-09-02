@@ -1,5 +1,12 @@
 label,sublabel,description,styles,bgcolor
-燃やさないごみ,,,img/moyasanai02.svg,#733b96
-資源,,,img/shigen02.svg,#77ae1f
-燃やすごみ,,,img/moyasu02.svg,#ea3b13
-びん,,,img/bin02.svg,#2dc7aa
+その他プラスチック,,,img/Prastic.svg,#696969
+粗大ごみ《大型家具等》,,,img/sodai_kagu.svg,#27a047
+粗大ごみ《その他粗大ごみ》,,,img/sodai_etc.svg,#77ae1f
+破砕ごみ,,,img/Hasai.svg,#387d39
+可燃ごみ,,,img/Kanen.svg,#ea3b13
+ビン,,,img/bin.svg,#a1d8e6
+金属類,,,img/Kinzoku.svg,#8f6552
+ガスライター,,,img/gas.svg,#7b5544
+乾電池,,,img/denchi.svg,#ffcc00
+古紙・古着類,,,img/Koshi_Hurugi.svg,#fcc800
+ペットボトル,,,img/PET.svg,#7fc6e4
