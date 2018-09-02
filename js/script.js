@@ -550,7 +550,6 @@ $(function() {
                 updateData(row_index);
             });
         } else {
-            updateAreaList();
             updateData(row_index);
         }
     }
