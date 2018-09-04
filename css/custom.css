@@ -272,7 +272,7 @@ input[type="radio"] {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     width: 90vw;
-    height: 80vh;
+    height: 75vh;
 }
 
 .tab_panel {
