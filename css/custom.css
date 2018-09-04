@@ -157,23 +157,20 @@ a.accordion-toggle-top:hover {
     z-index: 0;
 }
 
-#modal-open {
-    color: #cc0000;
-}
-
 
 /* モーダル コンテンツエリア */
 
 #modal-main {
     display: none;
-    width: 500px;
-    height: 300px;
+    width: 95vw;
+    height: 80vh;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #666666;
     position: fixed;
     z-index: 2;
+    overflow-y: scroll
 }
 
 
@@ -181,14 +178,13 @@ a.accordion-toggle-top:hover {
 
 #modal-bg {
     display: none;
-    width: 90vw;
-    height: 95vh;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    overflow-y: scroll
 }
 
 
