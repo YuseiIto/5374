@@ -246,11 +246,10 @@ input[type="radio"] {
 
 .tab_area {
     font-size: 0;
-    position: fixed;
 }
 
 .tab_area label {
-    height: 5vh;
+    height: 7vh;
     width: 150px;
     margin: 0 5px;
     display: inline-block;
@@ -273,7 +272,7 @@ input[type="radio"] {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     width: 90vw;
-    height: 65vh;
+    height: 70vh;
 }
 
 .tab_panel {
