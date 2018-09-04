@@ -714,7 +714,7 @@ $(function() {
         $("#modal-bg,#modal-main").click(function() {
             $("#modal-main,#modal-bg").fadeOut("slow", function() {
                 // スクロール無効を解除する
-                $('#content').css({ 'position': 'static', 'top': '0' });
+                $('#contents').css({ 'position': 'static', 'top': '0' });
                 $('html,body').scrollTop(scrollTop);
                 //挿入した<div id="modal-bg"></div>を削除
                 $('#modal-bg').remove();
@@ -743,7 +743,7 @@ $(function() {
 
         // スクロールを無効にする
         var scrollTop = $(window).scrollTop();
-        $('#content').css({ 'position': 'fixed', 'top': -scrollTop });
+        $('#contents').css({ 'position': 'fixed', 'top': -scrollTop });
 
 
     });
