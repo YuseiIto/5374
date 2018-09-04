@@ -719,7 +719,7 @@ $(function() {
         $("#modal-bg,#modal-main").fadeIn("slow");
 
         //画面のどこかをクリックしたらモーダルを閉じる
-        $("#modal-bg,#modal-main").click(function() {
+        $("#modal-bg").click(function() {
             $("#modal-main,#modal-bg").fadeOut("slow", function() {
 
                 $('#contents').attr({ style: '' });
