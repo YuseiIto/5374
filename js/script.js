@@ -702,7 +702,7 @@ $(function() {
     //テキストリンクをクリックしたら
     $("#modal-open").click(function() {
 
-        current_scrollY = $(window).scrollTop();
+        var current_scrollY = $(window).scrollTop();
         $('#contents').css({
             position: 'fixed',
             width: '100%',
