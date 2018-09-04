@@ -271,6 +271,7 @@ input[type="radio"] {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
+    height: 100%;
 }
 
 .tab_panel {
