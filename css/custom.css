@@ -209,13 +209,11 @@ a.accordion-toggle-top:hover {
     height: 80vh;
     margin: 0;
     padding: 15px;
-    padding-top: 15px;
+    padding-top: 0px;
     background-color: #ffffff;
     color: #666666;
     position: fixed;
     z-index: 2;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 
@@ -236,8 +234,10 @@ a.accordion-toggle-top:hover {
 /*モーダル内　タブ*/
 
 .tab_wrap {
-    width: 500px;
+    width: 93vw;
+    height: 77vh;
     margin: 80px auto;
+    margin-top: 0px;
 }
 
 input[type="radio"] {
@@ -246,10 +246,10 @@ input[type="radio"] {
 
 .tab_area {
     font-size: 0;
-    margin: 0 10px;
 }
 
 .tab_area label {
+    height: 7vh;
     width: 150px;
     margin: 0 5px;
     display: inline-block;
@@ -268,6 +268,11 @@ input[type="radio"] {
 
 .panel_area {
     background: #fff;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    width: 90vw;
+    height: 70vh;
 }
 
 .tab_panel {
