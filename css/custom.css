@@ -268,15 +268,15 @@ input[type="radio"] {
 
 .panel_area {
     background: #fff;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
 }
 
 .tab_panel {
     width: 100%;
     padding: 80px 0;
     display: none;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
 }
 
 .tab_panel p {
