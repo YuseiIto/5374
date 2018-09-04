@@ -694,8 +694,6 @@ $(function() {
     //==================================================================
 
     updateAreaList();
-
-    Push.Permission.request(); //Request permission for push notification
 });
 
 //modal
@@ -740,3 +738,5 @@ $(function() {
         }
     });
 });
+
+Push.Permission.request(); //push.jsは後から読み込まないとios Safariでエラーをはく。
