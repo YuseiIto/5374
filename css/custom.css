@@ -244,7 +244,7 @@ input[type="radio"] {
 }
 
 .tab_area {
-    font-size: 10px;
+    font-size: 0;
     position: fixed;
 }
 
