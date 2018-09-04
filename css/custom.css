@@ -213,7 +213,8 @@ a.accordion-toggle-top:hover {
     color: #666666;
     position: fixed;
     z-index: 2;
-    overflow-y: scroll
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 
