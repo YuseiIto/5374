@@ -722,7 +722,7 @@ $(function() {
         $("#modal-bg,#modal-main").click(function() {
             $("#modal-main,#modal-bg").fadeOut("slow", function() {
 
-                $('#wrapper').attr({ style: '' });
+                $('#contents').attr({ style: '' });
                 $('html, body').prop({ scrollTop: current_scrollY });
 
                 //挿入した<div id="modal-bg"></div>を削除
