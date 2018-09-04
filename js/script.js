@@ -701,6 +701,12 @@ $(function() {
 
     //テキストリンクをクリックしたら
     $("#modal-open").click(function() {
+
+        $('#contents').css({
+            position: 'fixed',
+            width: '100%',
+            top: -1 * current_scrollY
+        });
         //body内の最後に<div id="modal-bg"></div>を挿入
         $("body").append('<div id="modal-bg"></div>');
 
@@ -742,11 +748,7 @@ $(function() {
             });
         }
 
-        $('#contents').css({
-            position: 'fixed',
-            width: '100%',
-            top: -1 * current_scrollY
-        });
+
     });
 });
 
