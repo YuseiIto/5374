@@ -713,6 +713,9 @@ $(function() {
         //画面のどこかをクリックしたらモーダルを閉じる
         $("#modal-bg,#modal-main").click(function() {
             $("#modal-main,#modal-bg").fadeOut("slow", function() {
+                // スクロール無効を解除する
+                $('#content').css({ 'position': 'static', 'top': '0' });
+                $('html,body').scrollTop(scrollTop);
                 //挿入した<div id="modal-bg"></div>を削除
                 $('#modal-bg').remove();
             });
@@ -721,6 +724,7 @@ $(function() {
 
         //画面の左上からmodal-mainの横幅・高さを引き、その値を2で割ると画面中央の位置が計算できます
         $(window).resize(modalResize);
+
 
         function modalResize() {
 
@@ -736,7 +740,13 @@ $(function() {
                 "top": ((h - ch) / 2) + "px"
             });
         }
+
+        // スクロールを無効にする
+        var scrollTop = $(window).scrollTop();
+        $('#content').css({ 'position': 'fixed', 'top': -scrollTop });
+
+
     });
 });
 
-Push.Permission.request(); //push.jsは後から読み込まないとios Safariでエラーをはく。
+Push.Permission.request(); //push.jsの実行は後回しにしないとios Safariで他の機能を邪魔する。
