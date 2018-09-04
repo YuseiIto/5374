@@ -216,6 +216,7 @@ a.accordion-toggle-top:hover {
     z-index: 2;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
 }
 
 
