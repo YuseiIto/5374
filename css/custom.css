@@ -250,7 +250,7 @@ input[type="radio"] {
 }
 
 .tab_area label {
-    height: 10vh;
+    height: 5vh;
     width: 150px;
     margin: 0 5px;
     display: inline-block;
