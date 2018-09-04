@@ -6,6 +6,10 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125116847-1"></script>
 
+    <!--Push Notification-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -37,65 +41,75 @@
 </head>
 
 <body>
-    <style id="accordion-style" type="text/css"></style>
-    <div id="accordion"></div>
-    <select class="form-control" id="select_area"></select>
-    <div class="accordion" id="accordion3">
-        <div class="accordion-group-top">
-            <div class="accordion-heading">
-                <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_0">5374.jp for Ritto について</a>
-            </div>
-            <div id="collapse3_0" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <div id="help">
-                        ゴミの問題は、どの地域でも深刻になりつつあります。 そんな中、Code for Kanazawaによって、正しいゴミの捨て方に注目したWebアプリ、5374.jpが制作されました。 5374.jp for Rittoは、その栗東市版です。 5374.jpの目的と使い方は、とてもシンプルです。
-                        <h2>目的</h2>
-                        「いつ、どのゴミが収集されているのか？」 例えばお引っ越しをされた場合や、新しく栗東市に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
-                        <h2>使い方</h2>
-                        <h3>色でゴミのジャンルを表示</h3>
-                        <p>一番近いゴミの日とジャンルを上から順に表示しています。</p>
-                        <h3>捨てる事が可能なゴミ</h3>
-                        <p>ゴミのジャンルをタップすると、捨てることが可能なゴミの一覧を見ることができます</p>
-                        <h3>設定</h3>
-                        <p>お住まいの地域を選択することで、ゴミ収集日が自動的に更新されます。</p>
-                        <div id="caption">
-                            <h4>提供されるゴミ情報について</h4>
-                            <p>栗東市が公開している<a target="_blank" href="http://www.city.ritto.lg.jp/soshiki/kankyokeizai/kankyo/oshirase/gomikarenda/1911.html">ごみカレンダー</a>を利用して、アプリに実装しました。</p>
-                            <h4>ライセンスについて</h4>
-                            <p>本アプリの著作権はCode for Kanazawaに帰属します。</p>
-                            <h5>金沢市　オリジナル版開発チーム</h5>
-                            <ul class="credit">
-                                <li>小野 祐貴(Yuki ONO)　Developer</li>
-                                <li>五十川 員申(Kazunobu IKAGAWA)　Developer</li>
-                                <li>高木 志宗(Yukimune TAKAGI)　Developer</li>
-                                <li>宮田 人司(Hotoshi MIYATA)　Designer</li>
-                            </ul>
-                            <p>このような素晴らしいCivic Techプロダクトの開発者の皆様に、心からの尊敬と感謝の念を表します。</p>
-                            <h5>栗東市版制作</h5>
-                            <ul class="credit">
-                                <li>伊藤　祐聖(Yusei Ito) 栗東市版コアデベロッパ</li>
-                            </ul>
-                            <p>一緒にICTで地元に貢献しませんか? 栗東市版では、データ制作やソフトウェアの改善にご協力いただける方をお待ちしています。ご興味がお有りの方は、<a href="https://goo.gl/forms/MFmATEEEQFJu97GY2">こちら</a>からご連絡ください。<br> また、ご意見やそのほかのご連絡は、
-                                <a href="https://goo.gl/forms/IjC9jToR03iTnrbq1">こちら</a>へお寄せくせださい。</p>
+    <div id="modal-main">
+        <div id="collapse3_0" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div id="help">
+                    ゴミの問題は、どの地域でも深刻になりつつあります。 そんな中、Code for Kanazawaによって、正しいゴミの捨て方に注目したWebアプリ、5374.jpが制作されました。 5374.jp for Rittoは、その栗東市版です。 5374.jpの目的と使い方は、とてもシンプルです。
+                    <h2>目的</h2>
+                    「いつ、どのゴミが収集されているのか？」 例えばお引っ越しをされた場合や、新しく栗東市に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
+                    <h2>使い方</h2>
+                    <h3>色でゴミのジャンルを表示</h3>
+                    <p>一番近いゴミの日とジャンルを上から順に表示しています。</p>
+                    <h3>捨てる事が可能なゴミ</h3>
+                    <p>ゴミのジャンルをタップすると、捨てることが可能なゴミの一覧を見ることができます</p>
+                    <h3>設定</h3>
+                    <p>お住まいの地域を選択することで、ゴミ収集日が自動的に更新されます。</p>
+                    <div id="caption">
+                        <h4>提供されるゴミ情報について</h4>
+                        <p>栗東市が公開している<a target="_blank" href="http://www.city.ritto.lg.jp/soshiki/kankyokeizai/kankyo/oshirase/gomikarenda/1911.html">ごみカレンダー</a>を利用して、アプリに実装しました。</p>
+                        <h4>ライセンスについて</h4>
+                        <p>本アプリの著作権はCode for Kanazawaに帰属します。</p>
+                        <h5>金沢市　オリジナル版開発チーム</h5>
+                        <ul class="credit">
+                            <li>小野 祐貴(Yuki ONO)　Developer</li>
+                            <li>五十川 員申(Kazunobu IKAGAWA)　Developer</li>
+                            <li>高木 志宗(Yukimune TAKAGI)　Developer</li>
+                            <li>宮田 人司(Hotoshi MIYATA)　Designer</li>
+                        </ul>
+                        <p>このような素晴らしいCivic Techプロダクトの開発者の皆様に、心からの尊敬と感謝の念を表します。</p>
+                        <h5>栗東市版制作</h5>
+                        <ul class="credit">
+                            <li>伊藤　祐聖(Yusei Ito) 栗東市版コアデベロッパ</li>
+                        </ul>
+                        <p>一緒にICTで地元に貢献しませんか? 栗東市版では、データ制作やソフトウェアの改善にご協力いただける方をお待ちしています。ご興味がお有りの方は、<a href="https://goo.gl/forms/MFmATEEEQFJu97GY2">こちら</a>からご連絡ください。<br> また、ご意見やそのほかのご連絡は、
+                            <a href="https://goo.gl/forms/IjC9jToR03iTnrbq1">こちら</a>へお寄せくせださい。</p>
 
-                            <br>
-                            <br> 以下、オリジナル版(金沢市版)を制作された、Code for Kanazawaのご紹介です。
-                        </div>
-                        <div id="cfk">
-                            <h3>Code for Kanazawaについて</h3>
-                            <p>コードで、世界をHappyに。<br /> 各地域には様々な課題があり、解決するためのコミュニティ（団体）も数多くあります。
-                                <br /> 課題の中には、ITやデザインの力で解決できるものも多くありますが、全てのコミュニティにそのスキル（技術）が備わっているわけではありません。
-                                <br /><br /> Code for Kanazawa（CfK）は、市民の課題を集め、その課題を整理・分析した上で、メンバーが実際に課題解決となるソフトウェアやハードウェア（仕組みや方法）を開発します。<br /> 私たちは、デザインをして、ソフトウェアコードを書き、課題を解決するサービスを完成させるのです。さらに、そのサービスを提供し続ける力も持ちます。
-                                <br /><br /> CfKは市民のための組織です。行政や民間企業の影響を受けずに中立・公益の立場から物事を判断するよう心がけています。
-                                <br /><br /> 公式サイト
-                                <br />
-                                <a href="http://www.codeforkanazawa.org/" style=" color: #FF0000;text-decoration: underline;">http://www.codeforkanazawa.org/</a>
-                            </p>
-                        </div>
+                        <br>
+                        <br> 以下、オリジナル版(金沢市版)を制作された、Code for Kanazawaのご紹介です。
+                    </div>
+                    <div id="cfk">
+                        <h3>Code for Kanazawaについて</h3>
+                        <p>コードで、世界をHappyに。<br /> 各地域には様々な課題があり、解決するためのコミュニティ（団体）も数多くあります。
+                            <br /> 課題の中には、ITやデザインの力で解決できるものも多くありますが、全てのコミュニティにそのスキル（技術）が備わっているわけではありません。
+                            <br /><br /> Code for Kanazawa（CfK）は、市民の課題を集め、その課題を整理・分析した上で、メンバーが実際に課題解決となるソフトウェアやハードウェア（仕組みや方法）を開発します。
+                            <br /> 私たちは、デザインをして、ソフトウェアコードを書き、課題を解決するサービスを完成させるのです。さらに、そのサービスを提供し続ける力も持ちます。
+                            <br /><br /> CfKは市民のための組織です。行政や民間企業の影響を受けずに中立・公益の立場から物事を判断するよう心がけています。
+                            <br /><br /> 公式サイト
+                            <br />
+                            <a href="http://www.codeforkanazawa.org/" style=" color: #FF0000;text-decoration: underline;">http://www.codeforkanazawa.org/</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- #contents START -->
+    <div id="contents">
+
+        <style id="accordion-style" type="text/css"></style>
+        <div id="accordion"></div>
+        <select class="form-control" id="select_area"></select>
+        <div class="accordion" id="accordion3">
+            <div class="accordion-group-top">
+                <div class="accordion-heading">
+                    <a id="modal-open" class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_0">5374.jp for Ritto について</a>
+                </div>
+
+            </div>
+        </div>
+
     </div>
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="js/jquery-1.10.2.min.js"></script>
