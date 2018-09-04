@@ -235,6 +235,7 @@ a.accordion-toggle-top:hover {
 
 .tab_wrap {
     width: 93vw;
+    height: 77vh;
     margin: 80px auto;
     margin-top: 0px;
 }
@@ -249,6 +250,7 @@ input[type="radio"] {
 }
 
 .tab_area label {
+    height: 10vh;
     width: 150px;
     margin: 0 5px;
     display: inline-block;
@@ -271,7 +273,7 @@ input[type="radio"] {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     width: 90vw;
-    height: 75vh;
+    height: 65vh;
 }
 
 .tab_panel {
