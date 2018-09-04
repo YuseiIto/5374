@@ -209,6 +209,7 @@ a.accordion-toggle-top:hover {
     height: 80vh;
     margin: 0;
     padding: 15px;
+    padding-top: 15px;
     background-color: #ffffff;
     color: #666666;
     position: fixed;
