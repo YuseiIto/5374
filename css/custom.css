@@ -234,7 +234,7 @@ a.accordion-toggle-top:hover {
 /*モーダル内　タブ*/
 
 .tab_wrap {
-    width: 500px;
+    width: 93vw;
     margin: 80px auto;
     margin-top: 0px;
 }
@@ -271,7 +271,7 @@ input[type="radio"] {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
-    width: 100%;
+    width: 90vw;
     height: 80vh;
 }
 
