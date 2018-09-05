@@ -102,7 +102,7 @@ var TrashModel = function(_lable, _cell, remarks) {
                 /****ADD****/
             } else {
                 // 不定期回収の場合（YYYYMMDD指定）
-                result_text = "不定期 ";
+                result_text = "直近";
                 this.regularFlg = 0; // 定期回収フラグオフ
             }
         }
