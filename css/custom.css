@@ -355,3 +355,7 @@ input[type="radio"] {
 .switch input:checked+label:hover:after {
     opacity: 0.5;
 }
+
+.notification {
+    height: 3vh;
+}
