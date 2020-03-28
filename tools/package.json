@@ -1,0 +1,13 @@
+{
+    "name": "tools",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Yusei Ito",
+    "license": "MIT",
+    "scripts": { "start": "node index.js" },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "fs": "^0.0.1-security",
+        "request": "^2.88.2"
+    }
+}
