@@ -47,8 +47,8 @@ targetFileNames.forEach((filename) => {
     const text_fs = fs.readFileSync(`./converted/${filename}.csv`, 'utf8');
     let text = trimbody(text_fs.toString());
     text = cleanbody(text);
-
-    let lines = text.split('\n');
-
-    console.log(`${i}:${lines[i]}`);
+    var lines = text.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+        console.log(`${i}:${lines[i]}`);
+    }
 });
