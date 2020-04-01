@@ -11,6 +11,7 @@ const targetFileNames = fileNameList.filter(RegExp.prototype.test, /.*\.pdf$/);
 const promises = [];
 
 
+
 function convert(filename) {
 
     return new Promise((resolve) => {
@@ -20,9 +21,11 @@ function convert(filename) {
         var req = request.post({ encoding: null, url: url }, function(err, resp, body) {
             if (!err && resp.statusCode == 200) {
                 fs.writeFile(`./converted/${filename}.csv`, body, function(err) {
+
                     if (err) {
                         console.log('error writing file');
                     } else {
+
                         resolve();
                     }
                 });
@@ -47,5 +50,12 @@ targetFileNames.forEach((filename) => { promises.push(convert(filename)) });
 Promise.all(promises).then(() => {
     console.log("Download done.");
 
+    targetFileNames.forEach((filename) => {
 
+        var text = fs.readFileSync(`converted/${filename}.csv`, 'utf8');
+        var lines = text.toString().split('¥n');
+        for (let i = 0; i < lines.length(); i++) {
+            console.log(`${i}:${lines[i]}`);
+        }
+    });
 });
