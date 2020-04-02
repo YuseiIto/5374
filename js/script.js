@@ -389,76 +389,63 @@ $(function() {
 
 
     function updateAreaList() {
-        csvToArray("data/area_days2018.csv", function(tmp) {
+        csvToArray("data/area_days.csv", function(tmp) {
 
-            csvToArray("data/area_days2019.csv", function(tmp2) {
+            var area_days_label = tmp.shift();
+            for (var i in tmp) {
+                var row = tmp[i];
+                var area = new AreaModel();
+                area.label = row[0];
+                area.centerName = row[1];
 
-
-                //見出し行は連結不要のためr,c=1からスタート。
-                var r, c = 1;
-                for (r = 1; r < tmp.length; r++) {
-                    for (c = 1; c < tmp[r].length; c++) {
-                        tmp[r][c] = "" + tmp[r][c] + " " + tmp2[r][c]
+                areaModels.push(area);
+                //２列目以降の処理
+                for (var r = 2; r < 2 + MaxDescription; r++) {
+                    if (area_days_label[r]) {
+                        var trash = new TrashModel(area_days_label[r], row[r], remarks);
+                        area.trash.push(trash);
                     }
                 }
+            }
 
-                var area_days_label = tmp.shift();
+            csvToArray("data/center.csv", function(tmp) {
+                //ゴミ処理センターのデータを解析します。
+                //表示上は現れませんが、
+                //金沢などの各処理センターの休止期間分は一週間ずらすという法則性のため
+                //例えば第一金曜日のときは、一周ずらしその月だけ第二金曜日にする
+                tmp.shift();
                 for (var i in tmp) {
                     var row = tmp[i];
-                    var area = new AreaModel();
-                    area.label = row[0];
-                    area.centerName = row[1];
 
-                    areaModels.push(area);
-                    //２列目以降の処理
-                    for (var r = 2; r < 2 + MaxDescription; r++) {
-                        if (area_days_label[r]) {
-                            var trash = new TrashModel(area_days_label[r], row[r], remarks);
-                            area.trash.push(trash);
-                        }
-                    }
+                    var center = new CenterModel(row);
+                    center_data.push(center);
+                }
+                //ゴミ処理センターを対応する各地域に割り当てます。
+                for (var i in areaModels) {
+                    var area = areaModels[i];
+                    area.setCenter(center_data);
+                };
+                //エリアとゴミ処理センターを対応後に、表示のリストを生成する。
+                //ListメニューのHTML作成
+                var selected_name = getSelectedAreaName();
+                var area_select_form = $("#select_area");
+                var select_html = "";
+                select_html += '<option value="-1">地域を選択してください</option>';
+                for (var row_index in areaModels) {
+                    var area_name = areaModels[row_index].label;
+                    var selected = (selected_name == area_name) ? 'selected="selected"' : "";
+
+                    select_html += '<option value="' + row_index + '" ' + selected + " >" + area_name + "</option>";
                 }
 
-                csvToArray("data/center.csv", function(tmp) {
-                    //ゴミ処理センターのデータを解析します。
-                    //表示上は現れませんが、
-                    //金沢などの各処理センターの休止期間分は一週間ずらすという法則性のため
-                    //例えば第一金曜日のときは、一周ずらしその月だけ第二金曜日にする
-                    tmp.shift();
-                    for (var i in tmp) {
-                        var row = tmp[i];
-
-                        var center = new CenterModel(row);
-                        center_data.push(center);
-                    }
-                    //ゴミ処理センターを対応する各地域に割り当てます。
-                    for (var i in areaModels) {
-                        var area = areaModels[i];
-                        area.setCenter(center_data);
-                    };
-                    //エリアとゴミ処理センターを対応後に、表示のリストを生成する。
-                    //ListメニューのHTML作成
-                    var selected_name = getSelectedAreaName();
-                    var area_select_form = $("#select_area");
-                    var select_html = "";
-                    select_html += '<option value="-1">地域を選択してください</option>';
-                    for (var row_index in areaModels) {
-                        var area_name = areaModels[row_index].label;
-                        var selected = (selected_name == area_name) ? 'selected="selected"' : "";
-
-                        select_html += '<option value="' + row_index + '" ' + selected + " >" + area_name + "</option>";
-                    }
-
-                    //デバッグ用
-                    if (typeof dump == "function") {
-                        dump(areaModels);
-                    }
-                    //HTMLへの適応
-                    area_select_form.html(select_html);
-                    area_select_form.change();
-                });
+                //デバッグ用
+                if (typeof dump == "function") {
+                    dump(areaModels);
+                }
+                //HTMLへの適応
+                area_select_form.html(select_html);
+                area_select_form.change();
             });
-
         });
     }
 
